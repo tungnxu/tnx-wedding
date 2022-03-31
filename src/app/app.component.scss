@@ -1,0 +1,143 @@
+
+@keyframes mymove {
+  100% {background-size: 100% auto;}
+}
+.parallax {
+    position: relative;
+    /* The image used */
+    background-image: url("/assets/galerry/dance.jpg");
+
+  
+    /* Set a specific height */
+    min-height: calc(100vh - 182px);
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // animation: mymove 15s ease infinite;
+
+    .back-drop{
+      position: absolute;
+      opacity: .9;
+      background: black;
+      top:0;
+      left: 0;
+      right: 0;
+      bottom:0;
+      background: linear-gradient(58deg, #bc6307, rgba(255, 255, 255, 0) 58%);
+    }
+
+    @media screen and (max-width: 600px) {
+      min-height: calc(100vh - 324px);
+      background-attachment: local;
+      background-position: -295px 0px;
+      background-repeat: no-repeat;
+      background-size: 943px auto;
+    }
+    
+  }
+
+
+  .parallax-1 {
+    color: white;
+    /* The image used */
+    position: relative;
+    background-image: url("/assets/galerry/PHUC9249.JPG");
+  
+    /* Set a specific height */
+    min-height: 360px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .back-drop{
+      position: absolute;
+      opacity: .9;
+      background: rgb(0 0 0 / 42%);
+      top:0;
+      left: 0;
+      z-index: 0;
+      right: 0;
+      bottom:0;
+    }
+  }
+
+  .save-the-date{
+    display: grid;
+    -webkit-animation: tilt-in-fwd-tr 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: tilt-in-fwd-tr 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      min-height: 600px;
+align-items: center;
+      @media screen and (max-width: 600px) {
+        align-items: flex-end;
+       }
+      h1{
+        font-family: 'Dancing Script', cursive;
+      }
+      .date{
+        font-weight: bold;
+        span.swirl_left {
+          display: inline-block;
+          background: url('/assets/imgs/swirl_left.png') no-repeat left;
+          background-size: contain;
+          width: 66px;
+          height: 20px;
+        }
+        span.swirl_right {
+          display: inline-block;
+          background: url('/assets/imgs/swirl_right.png') no-repeat right;
+          background-size: contain;
+          width: 66px;
+          height: 20px;
+      }
+    }
+      .name{
+        font-size: 50px;
+        font-family: 'Great Vibes', cursive;
+        @media screen and (max-width: 600px) {
+          font-size: 30px;
+         }
+        span{
+          font-family:    'Great Vibes', cursive;
+          color: #dbff13;
+        }
+      }
+      .label{
+
+      }
+  }
+
+  .text-hightlight{
+    font-family:  'Great Vibes', cursive;
+  }
+
+ 
+
+  .location-section{
+    background-image: url('/assets/galerry/PHUC9344.JPG');
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    .back-drop{
+      position: absolute;
+      opacity: 0.9;
+      background: white;
+      top:0;
+      left: 0;
+      right: 0;
+      bottom:0;
+    }
+  }
+
+  .thank-you{
+      background-image: url('/assets/galerry/thank.jpg');
+     min-height: 400px;
+     background-size: cover;
+     background-repeat: no-repeat;
+  }

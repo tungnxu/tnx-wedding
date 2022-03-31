@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
+// import * as $ from 'jquery';
+declare var $ :any
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'th-wedding';
+ 
+  constructor(private _ngZone: NgZone) {
+    
+  }
+  ngAfterViewInit(): void {
+    this._ngZone.runOutsideAngular(() => {
+      setTimeout(()=>{
+        // ($ as any).firefly({
+        //   color: '#fff',
+        //   minPixel: 2,
+        //   maxPixel: 5,
+        //   total : 35,
+        //   on: '.snow'
+        // });
+        
+      }) 
+  });
+    
+    
+  }
 }

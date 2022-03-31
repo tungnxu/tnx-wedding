@@ -1,0 +1,27 @@
+.timer {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 600px) {
+      font-size: 1.5rem;
+      padding-bottom: 3rem;
+     }
+  }
+  .timer span {
+    font-size: 3rem;
+    // border: 1px solid white;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 16px;
+    width: 60px;
+    height: 60px;
+    margin-right: .5rem;
+    display: inline-block;
+    @media screen and (max-width: 600px) {
+      font-size: 1.5rem;
+      width: 40px;
+      height: 40px;
+     }
+  }
