@@ -9,7 +9,7 @@
 
   
     /* Set a specific height */
-    min-height: calc(100vh - 182px);
+    min-height: calc(100vh - 324px);
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -54,6 +54,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media screen and (max-width: 600px) {
+      background-attachment: local;
+      background-position: -70px center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
     .back-drop{
       position: absolute;
       opacity: .9;
@@ -115,6 +122,8 @@ align-items: center;
     font-family:  'Great Vibes', cursive;
   }
 
+
+
  
 
   .location-section{
@@ -140,4 +149,18 @@ align-items: center;
      min-height: 400px;
      background-size: cover;
      background-repeat: no-repeat;
+  }
+
+
+  .chu-re-label,.co-dau-label{
+    @media screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+      h5{
+        font-size: 25px;
+      }
+     }
   }
