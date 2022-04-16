@@ -2,6 +2,33 @@
 @keyframes mymove {
   100% {background-size: 100% auto;}
 }
+
+.custom-shape-divider-bottom-1648958845 {
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  @media screen and (max-width: 768px) {
+    bottom: -2px;
+   }
+}
+
+.custom-shape-divider-bottom-1648958845 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 187px;
+  @media screen and (max-width: 768px) {
+    height: 68px;
+   }
+}
+
+.custom-shape-divider-bottom-1648958845 .shape-fill {
+  fill: #FFFFFF;
+}
 .parallax {
     position: relative;
     /* The image used */
@@ -9,7 +36,7 @@
 
   
     /* Set a specific height */
-    min-height: calc(100vh - 324px);
+    min-height: calc(100vh - 60px);
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -29,12 +56,15 @@
       background: linear-gradient(58deg, #bc6307, rgba(255, 255, 255, 0) 58%);
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       min-height: calc(100vh - 324px);
       background-attachment: local;
-      background-position: -295px 0px;
+      background-position: -398px 0px;
       background-repeat: no-repeat;
       background-size: 943px auto;
+      .back-drop{
+        background: linear-gradient(19deg, #bc6307, rgba(255, 255, 255, 0) 58%);
+      }
     }
     
   }
@@ -110,7 +140,7 @@ align-items: center;
          }
         span{
           font-family:    'Great Vibes', cursive;
-          color: #dbff13;
+          color: #ffffff;
         }
       }
       .label{

@@ -17,9 +17,9 @@ export class AppComponent {
     this._ngZone.runOutsideAngular(() => {
       setTimeout(()=>{
         // ($ as any).firefly({
-        //   color: '#fff',
-        //   minPixel: 2,
-        //   maxPixel: 5,
+        //   color: '#ffffff5f',
+        //   minPixel: 1,
+        //   maxPixel: 3,
         //   total : 35,
         //   on: '.snow'
         // });
