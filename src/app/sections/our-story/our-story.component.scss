@@ -43,12 +43,14 @@
 	transform: translate(50%,-50%);
 }
 .timeline h3 {
-	font-size:28px;
+	font-size:20px;
 	margin-bottom: 10px;
+	// font-family: 'Dancing Script', cursive;
 }
 .timeline p {
   font-size: 20px;
   line-height: 28px;
+  font-family: 'Dancing Script', cursive;
 }
 .timeline li:nth-child(2n) {
 	align-self: flex-end;
