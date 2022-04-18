@@ -16,13 +16,13 @@ export class AppComponent {
   ngAfterViewInit(): void {
     this._ngZone.runOutsideAngular(() => {
       setTimeout(()=>{
-        ($ as any).firefly({
-          color: '#ffffff5f',
-          minPixel: 1,
-          maxPixel: 3,
-          total : 35,
-          on: '.snow'
-        });
+        // ($ as any).firefly({
+        //   color: '#ffffff5f',
+        //   minPixel: 1,
+        //   maxPixel: 3,
+        //   total : 35,
+        //   on: '.snow'
+        // });
         
       }) 
   });

@@ -1,28 +1,95 @@
 <div class="container ">
-    <h2 class="font-weight-bold text-center" style="  font-family: 'Dancing Script', cursive;">Our story...</h2>
-  <div class="text-center">
-    <img class="mb-3" src="/assets/imgs/venz1.png" style="    filter: invert(1);    width: 125px;" alt="" srcset="">
-  </div>   
-    <p class="text-center">Lưu giữ từng khoảnh khắc</p>
+    <h2>Our love story</h2>
+    <div class="text-center">
+        <img class="mb-3" src="/assets/imgs/venz1.png" style="    filter: invert(1);    width: 125px;" alt="" srcset="">
+    </div>
     <ul class="timeline">
-        <li intersectionObserver [intersectionDebounce]="500" (visibilityChange)="onVisibilityChanged($event)">
-            <h3>First know (Dec-2014)</h3>
-            <p>Chưa từng nghĩ sẽ yêu và lấy một người quen qua mạng, nhưng hoá ra đó lại là câu chuyện của tụi mình^^. Anh biết mình qua phòng chat tiếng Anh trên zalo, add zalo mình, chẳng biết cố tình hay vô tình còn mình thì đích thị là vô tình nhấn nút “accept”. Ngờ đâu cú nhấn nút định mệnh đã buộc chặt số phận hai kẻ xa lạ kể từ đó =))</p>
-        </li>
-        <li intersectionObserver [intersectionDebounce]="500" (visibilityChange)="onVisibilityChanged($event)">
-            <h3>First meet & First date (Aug-2015)</h3>
-            <p>Một ngày tháng 8, đúng kiểu cọc đi tìm trâu, mình đề xuất lên trường anh gặp anh, trước khi anh sang Brunei 4 tháng. 3 chặng xe buýt từ Kinh tế quốc dân lên FPT. Bước xuống xe, cảm giác vừa lạ vừa quen, người con trai mình từng nói chuyện suốt 6,7 tháng trời vốn chỉ được mường tượng qua những tấm ảnh giờ xuất hiện trước mặt mình bằng da bằng thịt. Chúng mình đã nắm tay nhau trên tầng thượng của toà nhà nhìn ngắm đại lộ Thăng long chạy dài cả dòng xe cộ lấp lánh. Đẹp và Hạnh phúc.</p>
-        </li>
-        <li intersectionObserver [intersectionDebounce]="500" (visibilityChange)="onVisibilityChanged($event)">
-            <h3>Grow up together</h3>
-            <p>7 năm bên nhau, chúng mình là tri kỉ của nhau. 2 tính cách đối lập lại hoà hợp nhau đến lạ kì. Có lẽ vì anh là người luôn bao dung với tất cả sự sốc nổi cố chấp của mình. Mình dạy anh nấu ăn, anh dạy mình mọi thứ về máy móc, và… cả cách lắng nghe người khác. Mình chỉ cảm thấy biết ơn vì tất cả những gì anh đã làm cho mình suốt 7 năm qua. </p>
-        </li>
-        <li intersectionObserver [intersectionDebounce]="500" (visibilityChange)="onVisibilityChanged($event)">
-            <h3>Engagement</h3>
-            <p>Chúng mình quyết định về chung một nhà vào tháng 10 năm ngoái. Do dịch bệnh nên tiệc cưới được hoãn </p>
-        </li>
+        <li intersectionObserver [intersectionDebounce]="900" (visibilityChange)="onVisibilityChanged($event, 1)">
+            <div class="content-story">
+                <h3>First know (Dec-2014)</h3>
+                <p>Chưa từng nghĩ sẽ yêu và lấy một người quen qua mạng, nhưng hoá ra đó lại là câu chuyện của tụi
+                    mình^^. Anh biết mình qua phòng chat tiếng Anh trên zalo, add zalo mình, chẳng biết cố tình hay vô
+                    tình còn mình thì đích thị là vô tình nhấn nút “accept”. Ngờ đâu cú nhấn nút định mệnh đã buộc chặt
+                    số phận hai kẻ xa lạ kể từ đó =))</p>
+            </div>
+            <div class="image-story">
+                <video #frame1 muted onloadedmetadata="this.muted = true; this.playbackRate = 0.7;">
+                    <source src="/assets/overlay.webm" type="video/webm">
+                </video>
         
+
+                    <div class="image-main first"
+                    style="background-image: url('https://lh3.googleusercontent.com/_H8Rd3sHlfjPg6E4mt7iQSQZD-mis6zWKkeGGU-NIxF2AVkMg4mw8fFcODRyk2vLFLjizECER6b5iW90pl6jhBT6xepct7x-2oShA9sfXT9k_fUSVl0-gqVHQlhyryIbm8nU2qxJIw=w2400');">
+                </div>
+            </div>
+        </li>
+        <li intersectionObserver [intersectionDebounce]="100" (visibilityChange)="onVisibilityChanged($event, 2)">
+            <div class="content-story">
+                <h3>First meet & First date (Aug-2015)</h3>
+                <p>Một ngày tháng 8, đúng kiểu cọc đi tìm trâu, mình đề xuất lên trường anh gặp anh, trước khi anh sang
+                    Brunei 4 tháng. 3 chặng xe buýt từ Kinh tế quốc dân lên FPT. Bước xuống xe, cảm giác vừa lạ vừa
+                    quen,
+                    người con trai mình từng nói chuyện suốt 6,7 tháng trời vốn chỉ được mường tượng qua những tấm ảnh
+                    giờ
+                    xuất hiện trước mặt mình bằng da bằng thịt. Chúng mình đã nắm tay nhau trên tầng thượng của toà nhà
+                    nhìn
+                    ngắm đại lộ Thăng long chạy dài cả dòng xe cộ lấp lánh. Đẹp và Hạnh phúc.</p>
+            </div>
+            <div class="image-story">
+                <video #frame2 muted onloadedmetadata="this.muted = true; this.playbackRate = 0.7;">
+                    <source src="/assets/overlay.webm" type="video/webm">
+                </video>
+                <div class="image-main"
+                    style="background-image: url('https://lh3.googleusercontent.com/qVOE_PQkZ0PhiTEXNKke0XpqnF_pcPDolMJ26WES43ST7FipoViguBLO2wHkmx4_d66ECxhblxufc19F_VvDJ9uTP1MSyi3Q_4Whlmbvp_8KH0cAgjXPu6QX1abcGs7a-FcZd_XJng=w2400');">
+                </div>
+                <!-- <img src=""
+                    alt="" srcset=""> -->
+            </div>
+        </li>
+        <li intersectionObserver [intersectionDebounce]="500" (visibilityChange)="onVisibilityChanged($event, 3)">
+            <div class="content-story">
+                <h3>Grow up together</h3>
+                <p>7 năm bên nhau, chúng mình là tri kỉ của nhau. 2 tính cách đối lập lại hoà hợp nhau đến lạ kì. Có lẽ
+                    vì
+                    anh là người luôn bao dung với tất cả sự sốc nổi cố chấp của mình. Mình dạy anh nấu ăn, anh dạy mình
+                    mọi
+                    thứ về máy móc, và… cả cách lắng nghe người khác. Mình chỉ cảm thấy biết ơn vì tất cả những gì anh
+                    đã
+                    làm cho mình suốt 7 năm qua. </p>
+            </div>
+            <div class="image-story">
+
+                <video #frame3 muted onloadedmetadata="this.muted = true; this.playbackRate = 0.7;">
+                    <source src="/assets/overlay.webm" type="video/webm">
+                </video>
+                <div class="image-main"
+                    style="background-image: url('https://lh3.googleusercontent.com/slmAsBs-FyGCZHHbCZkVwFHeUNk1s4GCvDBSGWlBNAxdgxlMT7zbl00OQK6DYJyMS396-Fqy9zniCCZtG6iez-C4X5PT-7n1lErTqputmTkyBKi2XYYKdd5S4WtdXJa87R5skRSvdw=w2400');">
+                </div>
+
+            </div>
+        </li>
+        <li intersectionObserver [intersectionDebounce]="500" (visibilityChange)="onVisibilityChanged($event, 4)">
+            <div class="content-story">
+                <h3>Engagement</h3>
+                <p>Chúng mình quyết định về chung một nhà vào tháng 10 năm ngoái. Do dịch bệnh nên tiệc cưới được hoãn
+                </p>
+            </div>
+            <div class="image-story">
+                <video #frame4 muted onloadedmetadata="this.muted = true; this.playbackRate = 0.7;">
+                    <source src="/assets/overlay.webm" type="video/webm">
+                </video>
+
+
+                <div class="image-main"
+                    style="background-image: url('https://lh3.googleusercontent.com/FQvFdgHNsw50Zfxxh4ax6E91WhWfYZUgjsAyBR_VE7E_5SPuhwt_dGa5KUp3C0W5I1U_CCo65ePzLldSrSn0agZlPyvAVFn1gHCJO7Hy0fUzYGCcRNyEoXQBk85i_SbqlhCSW9TP7w=w2400');">
+                </div>
+            </div>
+        </li>
+
     </ul>
+    <!-- <video width="600" #frame1 muted autoplay onloadedmetadata="this.muted = true; this.playbackRate = 0.7;">
+        <source src="/assets/save.webm" type="video/webm">
+    </video> -->
 
 
 

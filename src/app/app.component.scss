@@ -1,3 +1,11 @@
+.save-video{
+  top: -20px;
+    left: 14%;
+  position: absolute;
+  mix-blend-mode: screen;
+  width: 500px;
+}
+
 
 @keyframes mymove {
   100% {background-size: 100% auto;}

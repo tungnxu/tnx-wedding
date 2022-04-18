@@ -43,3 +43,10 @@
 @mixin gradient-striped($color: rgba($white, .15), $angle: 45deg) {
   background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
 }
+
+
+@mixin gradient-text(){
+  background: radial-gradient(#ed8b47, #b35d21, #7c492a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
