@@ -44,7 +44,7 @@ h2 {
 	transition: 3000ms cubic-bezier(0.08, 0.82, 0.17, 1);
 
 	@media screen and (max-width: 768px) {
-		height: 460px;
+		height: 513px;
 		border-top: none;
 	}
 
@@ -63,7 +63,7 @@ h2 {
 		position: relative;
 		z-index: 9;
 		top: 218px;
-		width: 260px;
+		width: 333px;
 
 	}
 }
@@ -111,8 +111,15 @@ h2 {
 	@media screen and (max-width: 768px) {
 		height: 586px;
 		.content-story {
-			width: 259px;
+			width: 344px;
+    		left: -93px;
 
+		}
+
+		.image-story{
+			left: -42% !important;
+			top: -44px;
+			width: 400px !important;
 		}
 	}
 
@@ -234,7 +241,7 @@ h2 {
 	}
 
 	.timeline p {
-		font-size: 16px;
+		font-size: 18px;
 	}
 
 }
