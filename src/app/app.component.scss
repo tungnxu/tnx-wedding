@@ -1,6 +1,6 @@
-.save-video{
+.save-video {
   top: -20px;
-    left: 14%;
+  left: 14%;
   position: absolute;
   mix-blend-mode: screen;
   width: 500px;
@@ -8,7 +8,9 @@
 
 
 @keyframes mymove {
-  100% {background-size: 100% auto;}
+  100% {
+    background-size: 100% auto;
+  }
 }
 
 .custom-shape-divider-bottom-1648958845 {
@@ -19,9 +21,11 @@
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
+  z-index: 9;
+
   @media screen and (max-width: 768px) {
     bottom: -2px;
-   }
+  }
 }
 
 .custom-shape-divider-bottom-1648958845 svg {
@@ -29,176 +33,333 @@
   display: block;
   width: calc(100% + 1.3px);
   height: 187px;
+
   @media screen and (max-width: 768px) {
     height: 68px;
-   }
+  }
 }
 
 .custom-shape-divider-bottom-1648958845 .shape-fill {
   fill: #FFFFFF;
-}
-.parallax {
-    position: relative;
-    /* The image used */
-    background-image: url("https://lh3.googleusercontent.com/Bv-NxRkZ3MKrYqVSeGXkqz_xNGMptogoORWzMqoSp6GKNnyO9EMmfanRIoitD7YjnSQCA1tJ53BAaleyFF5ElRNA4KsfBsoYo6ubK1qHwkmfqw7I2ZraEdNyJyCJNepw_K7mHqbG2g=w2400");
+  &.p1{
+    // d: path('M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z');
+    animation: morph 3s linear infinite alternate;
+  }
 
-  
-    /* Set a specific height */
-    min-height: calc(100vh - 60px);
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center top;
+  &.p2{
+    animation: morph 3s linear infinite 1s alternate;
+  }
+}
+
+
+@keyframes morph {
+  0%{
+    transform: scaleY(.6) scaleX(1.1);
+  }
+  100%{
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+
+
+.parallax {
+  align-items: center;
+  display: flex;
+  position: relative;
+  /* The image used */
+  background-image: url("https://lh3.googleusercontent.com/Bv-NxRkZ3MKrYqVSeGXkqz_xNGMptogoORWzMqoSp6GKNnyO9EMmfanRIoitD7YjnSQCA1tJ53BAaleyFF5ElRNA4KsfBsoYo6ubK1qHwkmfqw7I2ZraEdNyJyCJNepw_K7mHqbG2g=w2400");
+
+
+  /* Set a specific height */
+  min-height: 88vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // animation: mymove 15s ease infinite;
+
+  .back-drop {
+    position: absolute;
+    opacity: .9;
+    background: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(58deg, #bc6307, rgba(255, 255, 255, 0) 58%);
+  }
+
+  @media screen and (max-width: 768px) {
+    min-height: calc(100vh - 324px);
+    background-attachment: local;
+    background-position: -398px 0px;
+    background-repeat: no-repeat;
+    background-size: 943px auto;
+
+    .back-drop {
+      background: linear-gradient(19deg, #bc6307 10%,  rgba(188, 99, 7, .72) 19%, rgba(0, 0, 0, 0.15) 60%);
+    }
+  }
+
+}
+
+
+.parallax-1 {
+  color: white;
+  /* The image used */
+  position: relative;
+  background-image: url("https://lh3.googleusercontent.com/6RIqMVtYmL2bX2Zw-6IxoXQbjX1UBSxwoEWc5qJByutGc9bUPcXSc0f9z8dAt33Y3t_mt5CMn9iV_KT_judX9LW6j7FISasanQIMbOTpuQw6aIxdrt-qK41vhavFJwwANDlAUrg20Q=w2400");
+
+  /* Set a specific height */
+  min-height: 600px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+
+  @media screen and (max-width: 600px) {
+    place-items: flex-end;
+    background-attachment: local;
+    background-position: -70px center;
     background-repeat: no-repeat;
     background-size: cover;
-    // animation: mymove 15s ease infinite;
+  }
 
-    .back-drop{
-      position: absolute;
-      opacity: .9;
-      background: black;
-      top:0;
-      left: 0;
-      right: 0;
-      bottom:0;
-      background: linear-gradient(58deg, #bc6307, rgba(255, 255, 255, 0) 58%);
-    }
+  .back-drop {
+    position: absolute;
+    opacity: .9;
+    background: rgb(0 0 0 / 42%);
+    top: 0;
+    left: 0;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
 
-    @media screen and (max-width: 768px) {
-      min-height: calc(100vh - 324px);
-      background-attachment: local;
-      background-position: -398px 0px;
-      background-repeat: no-repeat;
-      background-size: 943px auto;
-      .back-drop{
-        background: linear-gradient(19deg, #bc6307, rgba(255, 255, 255, 0) 58%);
-      }
-    }
-    
+.save-the-date {
+  display: flex;
+  min-height: 600px;
+  align-items: center;
+  z-index: 9;
+  // filter: brightness(1.3) !important;
+
+  .save-the-date-wrap {
+    position: relative;
+    z-index: 2;
+    animation: draw 4s ease-out 0s forwards;
+    background-image: url(../assets/imgs/floral.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 420px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // filter: brightness(1.5) !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    align-items: flex-end;
+    width: 286px;
+    height: 420px;
+    margin: 0 auto;
   }
 
 
-  .parallax-1 {
-    color: white;
-    /* The image used */
-    position: relative;
-    background-image: url("https://lh3.googleusercontent.com/6RIqMVtYmL2bX2Zw-6IxoXQbjX1UBSxwoEWc5qJByutGc9bUPcXSc0f9z8dAt33Y3t_mt5CMn9iV_KT_judX9LW6j7FISasanQIMbOTpuQw6aIxdrt-qK41vhavFJwwANDlAUrg20Q=w2400");
-  
-    /* Set a specific height */
-    min-height: 360px;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+  .date {
+    animation: draw 4s ease-in-out 0s forwards;
+
+    font-weight: bold;
+
+
+   
+
+    span.swirl_left {
+      display: inline-block;
+      background: url('/assets/imgs/swirl_left.png') no-repeat left;
+      background-size: contain;
+      width: 66px;
+      height: 20px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    span.swirl_right {
+      display: inline-block;
+      background: url('/assets/imgs/swirl_right.png') no-repeat right;
+      background-size: contain;
+      width: 66px;
+      height: 20px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .name {
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: 'Great Vibes', cursive;
+    color: #ffffff;
+
+
+    &.tung {
+      animation: move-in 4s cubic-bezier(0.22, 0.61, 0.36, 1) 0s forwards;
+    }
+
+    &.huong {
+      animation: move-in-left 4s cubic-bezier(0.22, 0.61, 0.36, 1) 0s forwards;
+    }
 
     @media screen and (max-width: 600px) {
-      background-attachment: local;
-      background-position: -70px center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      font-size: 24px;
     }
-    .back-drop{
-      position: absolute;
-      opacity: .9;
-      background: rgb(0 0 0 / 42%);
-      top:0;
-      left: 0;
-      z-index: 0;
-      right: 0;
-      bottom:0;
+
+    span {
+      font-family: 'Great Vibes', cursive;
+      color: #ffffff;
     }
   }
 
-  .save-the-date{
-    display: grid;
-    -webkit-animation: tilt-in-fwd-tr 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: tilt-in-fwd-tr 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-      min-height: 600px;
-align-items: center;
-      @media screen and (max-width: 600px) {
-        align-items: flex-end;
-       }
-      h1{
-        font-family: 'Dancing Script', cursive;
-      }
-      .date{
-        font-weight: bold;
-        span.swirl_left {
-          display: inline-block;
-          background: url('/assets/imgs/swirl_left.png') no-repeat left;
-          background-size: contain;
-          width: 66px;
-          height: 20px;
-        }
-        span.swirl_right {
-          display: inline-block;
-          background: url('/assets/imgs/swirl_right.png') no-repeat right;
-          background-size: contain;
-          width: 66px;
-          height: 20px;
-      }
+  .label {}
+}
+
+.text-hightlight {
+  font-family: 'Great Vibes', cursive;
+}
+
+
+
+
+
+.location-section {
+  background-image: url('/assets/galerry/PHUC9344.JPG');
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  .back-drop {
+    position: absolute;
+    opacity: 0.9;
+    background: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.thank-you {
+  background-image: url('https://lh3.googleusercontent.com/n52bSn_k5CPfO9lPCIfSkCkOU8ZW7yOJ7D4pSsH6FoTFvgFsr3D7MHwnqgpSdkDdZ0W-cbQ_58GWv5ItyfhREHHXVVCn7K6BtIvMvBBJKJ_4O5oKUeY1OMY0D93yZ4b16ozlnQ7YMA=w2400');
+  min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.home-info{
+  background-color: white;
+
+  .container{
+    @media screen and (max-width: 768px) {
+      padding: 0;
     }
-      .name{
-        font-size: 50px;
-        font-family: 'Great Vibes', cursive;
-        @media screen and (max-width: 600px) {
-          font-size: 30px;
-         }
-        span{
-          font-family:    'Great Vibes', cursive;
-          color: #ffffff;
-        }
-      }
-      .label{
-
-      }
   }
-
-  .text-hightlight{
-    font-family:  'Great Vibes', cursive;
-  }
-
-
-
  
 
-  .location-section{
-    background-image: url('/assets/galerry/PHUC9344.JPG');
-    min-height: 400px;
-    background-repeat: no-repeat;
-    background-position: center;
+  .home-info-box{
+    width: 100%;
+    background-image: url(../assets/imgs/box.png);
     background-size: cover;
-    position: relative;
-    .back-drop{
-      position: absolute;
-      opacity: 0.9;
-      background: white;
-      top:0;
-      left: 0;
-      right: 0;
-      bottom:0;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    text-align: center;
+    padding: 0 7rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 768px) {
+      padding: 0 3rem;
+    }
+
+    h4{
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 1rem;
+    }
+
+    .sep{
+      margin-bottom: 1.5rem;
+    }
+    p{
+
+    }
+
+
+    &.one{
+      // transform: rotateY(24deg);  
+      transform-origin: right;
+      // box-shadow: -10px 2px 16px #00000024;
+      // animation: open-book-left 6s cubic-bezier(0.22, 0.61, 0.36, 1) 0s forwards;
+    }
+
+    &.two{
+      // transform: rotateY(-24deg);    
+      transform-origin: left;
+      // box-shadow: 10px 2px 16px #00000024;
+      // animation: open-book-right 6s cubic-bezier(0.22, 0.61, 0.36, 1) 0s forwards;
+    }
+  }
+}
+
+
+.flower {
+  position: absolute;
+
+  background-repeat: no-repeat;
+
+  background-size: contain;
+  right: 0;
+
+  &.one {
+    bottom: 0;
+    right: 0;
+    width: 450px;
+    height: 389px;
+    background-image: url(../assets/imgs/hoa1.png);
+
+    @media screen and (max-width: 768px) {
+      width: 269px;
+      height: 228px;
     }
   }
 
-  .thank-you{
-      background-image: url('/assets/galerry/thank.jpg');
-     min-height: 400px;
-     background-size: cover;
-     background-repeat: no-repeat;
+  &.two {
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 314px;
+    background-image: url(../assets/imgs/hoa2.png);
   }
+}
 
-
-  .chu-re-label,.co-dau-label{
-    @media screen and (max-width: 600px) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-      align-items: center;
-      h5{
-        font-size: 25px;
-      }
-     }
-  }

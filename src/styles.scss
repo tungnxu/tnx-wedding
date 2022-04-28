@@ -1,41 +1,47 @@
 @import "assets/scss/bootstrap";
 
-
-body{
+html {
+  max-width: 100%;
   overflow-x: hidden;
+  // scroll-behavior: smooth;
+}
+
+body {
   position: relative;
 }
 
-header{
+header {
   font-weight: bold;
   position: absolute;
-  top:0;
-  left:0;
-  right:0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 9;
 
   @media screen and (max-width: 600px) {
     position: relative;
   }
-  nav{
-    a{
+
+  nav {
+    a {
       font-size: 14px;
       letter-spacing: 2px;
       text-decoration: none !important;
       color: rgba(255, 255, 255, 0.812);
       margin: 0 1rem;
-      &:hover{
+
+      &:hover {
         color: white;
       }
     }
   }
 }
 
-.main-section{
-    // background-image: url('/assets/galerry/PHUC9249.JPG');
-    min-height: 400px;
-    background-size: cover;
-    background-repeat: no-repeat;
+.main-section {
+  // background-image: url('/assets/galerry/PHUC9249.JPG');
+  min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
@@ -51,52 +57,241 @@ header{
  * animation tilt-in-fwd-tr
  * ----------------------------------------
  */
- @-webkit-keyframes tilt-in-fwd-tr {
-    0% {
-      -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
-              transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-              transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-      opacity: 1;
-    }
+@-webkit-keyframes tilt-in-fwd-tr {
+  0% {
+    -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    opacity: 0;
   }
-  @keyframes tilt-in-fwd-tr {
-    0% {
-      -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
-              transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-              transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-      opacity: 1;
-    }
-  }
-  
-  
 
-  .typewriter {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
+  100% {
+    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
   }
+}
+
+@keyframes tilt-in-fwd-tr {
+  0% {
+    -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
+  }
+}
+
+
+
+.typewriter {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange;
+  }
+}
+
+@keyframes move-in {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes move-in-left {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes draw {
+  from {
+    clip-path: circle(0%);
+    // filter: brightness(1);
+  }
+
+  to {
+    clip-path: circle(100%);
+    // filter: brightness(1.5);
+  }
+}
+
+
+@keyframes open-book-left {
+  from {
+    transform: rotateY(34deg);
+  }
+
+  to {
+    transform: rotateY(10deg);
+  }
+}
+
+@keyframes open-book-right {
+  from {
+    transform: rotateY(-34deg);
+  }
+
+  to {
+    transform: rotateY(-10deg);
+  }
+}
+
+@keyframes title-effect {
+  from {
+   opacity: 0;
+   letter-spacing: 19px;
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 14px;
+  }
+}
+
+
+
+.loading{
+  position: fixed;
+  top:0;
+  left: 0;
+  right:0;
+  bottom: 0;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 2s ease;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  span{
+    margin: 0 3.5rem;
+    color: #8a8388;
+    font-size: 28px;
+  }
+
+  &.hide{
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .center{
+    display: flex;
+  } 
+  .back {
+      position: fixed;
+      padding: 0;
+      margin: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      animation-name: backdiv;
+      animation-duration: 1s; 
+      animation-iteration-count: infinite;
+    }
   
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
+    .heart {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: pink;
+      height: 50px;
+      width: 50px;
+      transform: rotate(-45deg);
+      animation-name: beat;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+    .heart:after {
+      background-color: pink;
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 0px;
+      left: 25px;
+    }
+    .heart:before {
+      background-color: pink;
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: -25px;
+      left: 0px;
+    }
   
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
-  }
+    @keyframes backdiv {
+      50% {
+        background: #ffe6f2;
+      }
+    }
+  
+    @keyframes beat {
+      0% {
+        transform: scale(1) rotate(-45deg);
+      }
+      50% {
+        transform: scale(0.6) rotate(-45deg);
+      }
+    }
+}

@@ -12,6 +12,11 @@ export class OurStoryComponent implements OnInit {
   @ViewChild('frame3', { static: true }) frame3: any
   @ViewChild('frame4', { static: true }) frame4: any
 
+  isShowImage1 = false
+  isShowImage2 = false
+  isShowImage3 = false
+  isShowImage4 = false
+
   visibilityStatus: { [key: number]: IntersectionStatus } = {};
   intersectionStatus = IntersectionStatus;
 
@@ -26,22 +31,26 @@ export class OurStoryComponent implements OnInit {
       case 1:
         setTimeout(()=>{
           this.frame1.nativeElement.play()
+          this.isShowImage1 = true
         },1000)
         break;
       case 2:
         setTimeout(()=>{
+          this.isShowImage2 = true
         this.frame2.nativeElement.play()
-        },2000)
+        },1000)
         break;
       case 3:
         setTimeout(()=>{
+          this.isShowImage3 = true
         this.frame3.nativeElement.play()
-       },2500)
+       },1500)
         break;
       case 4:
         setTimeout(()=>{
+          this.isShowImage4 = true
         this.frame4.nativeElement.play()
-      },3000)
+      },2000)
         break;
     }
     console.log(status)
