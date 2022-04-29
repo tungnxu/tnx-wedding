@@ -29,9 +29,50 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 200px;
   grid-auto-flow: row dense;
+
+ 
+  &.visible{
+    .item{
+      &:nth-of-type(1) {
+        animation: move-up  1s ease-out 0s forwards ;
+      }
+      &:nth-of-type(2) {
+        animation: move-up  1s ease-out 1s forwards ;
+      }
+      &:nth-of-type(3) {
+        animation: move-up  1s ease-out 2s forwards ;
+      }
+      &:nth-of-type(4) {
+        animation: move-up  1s ease-out 3s forwards ;
+      }
+      &:nth-of-type(5) {
+        animation: move-up  1s ease-out 4s forwards ;
+      }
+      &:nth-of-type(6) {
+        animation: move-up  1s ease-out 5s forwards ;
+      }
+      &:nth-of-type(7) {
+        animation: move-up  1s ease-out 6s forwards ;
+      }
+      &:nth-of-type(8) {
+        animation: move-up  1s ease-out 7s forwards ;
+      }
+      &:nth-of-type(9) {
+        animation: move-up  1s ease-out 8s forwards ;
+      }
+      &:nth-of-type(10) {
+        animation: move-up  1s ease-out 9s forwards ;
+      }
+      &:nth-of-type(11) {
+        animation: move-up  1s ease-out 10s forwards ;
+      }
+    }
+
+  }
 }
 
 .item {
+  opacity: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -49,6 +90,7 @@ background:  url('https://lh3.googleusercontent.com/RlyVgIh1Fsvc48ZLixtzvAniXQFB
   transition: transform 0.3s ease-out;
   cursor: pointer;
   counter-increment: item-counter;
+
   
   &:nth-of-type(1) {
     background-image: url('https://lh3.googleusercontent.com/MPVjSKxT4cRRxYvLRnZqJhHDbA7Ulu29Ie7A8hWpAZC_WOrvXCY6FvP-x0FugLzRPhHawF3pl4S45nqjx1PS891MPKeChS6MBS8EZilkidaZODIRVk-Y3DIunL0RTCQLukq78-3wnA=w800');
