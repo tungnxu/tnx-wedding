@@ -7,7 +7,6 @@ import { IntersectionObserverDirective } from './directive/intersection-observer
 import { CountDownComponent } from './components/count-down/count-down.component';
 import { GalleryComponent } from './sections/gallery/gallery.component';
 import { IntroComponent } from './sections/intro/intro.component';
-import { RouterModule } from '@angular/router';
 import { LoveGiftComponent } from './sections/love-gift/love-gift.component';
 
 @NgModule({
@@ -22,7 +21,6 @@ import { LoveGiftComponent } from './sections/love-gift/love-gift.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]

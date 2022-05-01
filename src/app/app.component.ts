@@ -18,7 +18,7 @@ export class AppComponent {
   to: string;
   at: string; 
 
-  constructor(private _ngZone: NgZone, private ref: ChangeDetectorRef, public loader: LoadingService, private route: ActivatedRoute) {
+  constructor(private _ngZone: NgZone, private ref: ChangeDetectorRef, public loader: LoadingService) {
   }
 
   getInvitation(){
@@ -41,11 +41,9 @@ export class AppComponent {
     // this.to = this.route.snapshot.queryParamMap.get('to')
     // this.at = this.route.snapshot.queryParams.at;
 
-    this.route.queryParams.subscribe((data) => {
-      this.to = data?.to;
-      this.at = data?.at;
-    })
-    console.log(this.to + ' ' + this.at);
+    const params = new URLSearchParams(window.location.search)
+    this.to = params.get('to');
+    this.at = params.get('at');
     this.loader.show();
     this.ref.detectChanges();
     

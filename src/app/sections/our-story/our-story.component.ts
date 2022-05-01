@@ -53,7 +53,6 @@ export class OurStoryComponent implements OnInit {
       },2000)
         break;
     }
-    console.log(status)
   }
 
 }
