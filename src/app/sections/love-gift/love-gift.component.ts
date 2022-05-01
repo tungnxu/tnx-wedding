@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoveGiftComponent implements OnInit {
 
+  isShow: boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showGift(){
+    this.isShow = true;
   }
 
 }

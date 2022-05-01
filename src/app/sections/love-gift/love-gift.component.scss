@@ -49,3 +49,20 @@ h2 {
     display: inline-block;
     perspective: 600px;
 }
+
+.gift-button{
+  width: 600px;
+  height: 300px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  background-size: cover;
+  background-image: url('https://lh3.googleusercontent.com/HLwk1THvxVY6BxZHwwS7SpHCvsiRoeqczd-Abw_Z7d1W3EEAKFuRnqoHbo3xd7TYEKplpRKxUNXrwgO6_E3QsNIbjBWvsV9siIFtT-RzgjqqvQUx6RWXAXj6d7_3qeRZeWmSboKYYg=w800');
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  &.visible{
+    animation: draw 3s ease-out 0s forwards;
+  }
+}

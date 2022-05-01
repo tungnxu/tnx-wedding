@@ -4,26 +4,35 @@
         <img class="mb-3" src="https://lh3.googleusercontent.com/OQdPOV0zGTO0hOTKa5BvO7QvoZtMjpjllK0qmP4L6RwtgV0YU5y6LYu9JhGVcGTvvCQ7rP3RYi7bXh76k44dYybXnoZoxLXF7YnnWG-roxjbRFR7nBwWABhGg8tXxtZLk35gyeFqXQ=w800" style="    filter: invert(1);    width: 125px;" alt="" srcset="">
     </div>
 
-    <div class="text-center">
-        <div class="card-wrapper ">
-            <div class="gift tung">
-                <img class="mb-5" width="120px" src="https://lh3.googleusercontent.com/znFna74Td-p8pfeksGhV6SGqxVzVin6ZGIZ7USqzuvwvyJXpVI4KYDiytlgqlwjXuSYoft6qhYc2DRJtUb_zq7muAtko9pjZg0gn67KD9XLygo5gYXUpcAhbIEk90Yz8WUrEtm5A3A=w800" alt="" srcset="">
-                <h6 class="font-weight-bold text-right">NGUYEN XUAN TUNG</h6>
-                <h5 class="text-right">STK: 19034315916014</h5>
+    <div [hidden] ="isShow" class="gift-button text-center" intersectionObserver [intersectionDebounce]="200">
+        <button class="btn btn-lg btn-primary" type="button" (click)="showGift()">Send gift to us</button>
+    </div>
+
+    <div  [hidden] ="!isShow" >
+
+        <div class="text-center">
+            <div class="card-wrapper ">
+                <div class="gift tung">
+                    <img class="mb-5" width="120px" src="https://lh3.googleusercontent.com/znFna74Td-p8pfeksGhV6SGqxVzVin6ZGIZ7USqzuvwvyJXpVI4KYDiytlgqlwjXuSYoft6qhYc2DRJtUb_zq7muAtko9pjZg0gn67KD9XLygo5gYXUpcAhbIEk90Yz8WUrEtm5A3A=w800" alt="" srcset="">
+                    <h6 class="font-weight-bold text-right">NGUYEN XUAN TUNG</h6>
+                    <h5 class="text-right">STK: 19034315916014</h5>
+                </div>
+            </div>
+        
+            <div class="card-wrapper ">
+                <div class="gift huong">
+                    <img class="mb-5" width="120px" src="https://lh3.googleusercontent.com/TJgtNVImKRhOJNQm21rsgdqwmj3UozTqPcbc0K1PiKrP3qWVnUeQn3eXkxrXBmaf0BlQEpkDa5H5o9nXhuSy3UpPLpMk1lYEKaztlYO75HIkk3w4ddBMKdA5NqQk_LrjRI7DfyZHHQ=w800" alt="" srcset="">
+                    <h6 class="font-weight-bold text-right">DINH THI HUONG</h6>
+                    <h5 class="text-right">STK: 0451000451917</h5>
+                </div>
             </div>
         </div>
+        <div class="text-center py-3">
+            Or <img width="80" src="https://lh3.googleusercontent.com/F-R7Rm054U9n-gIyeiHwvxaDEzkObTeMY78sG4lfcjwTO4D_KVbwBTV3g7eKfIR1KLZTzaoqvxwRxsdcShZyF7wuarn8ZVyZF2ZkEU5TJCPE1pD91tvN_ZpS6StPubJVECQTI7lMuQ=w800" alt="">
+           <a href="https://paypal.me/tungnxu">https://paypal.me/tungnxu</a>
+        </div>
+    </div>
     
-        <div class="card-wrapper ">
-            <div class="gift huong">
-                <img class="mb-5" width="120px" src="https://lh3.googleusercontent.com/TJgtNVImKRhOJNQm21rsgdqwmj3UozTqPcbc0K1PiKrP3qWVnUeQn3eXkxrXBmaf0BlQEpkDa5H5o9nXhuSy3UpPLpMk1lYEKaztlYO75HIkk3w4ddBMKdA5NqQk_LrjRI7DfyZHHQ=w800" alt="" srcset="">
-                <h6 class="font-weight-bold text-right">DINH THI HUONG</h6>
-                <h5 class="text-right">STK: 0451000451917</h5>
-            </div>
-        </div>
-    </div>
-    <div class="text-center py-3">
-        Or <img width="80" src="https://lh3.googleusercontent.com/F-R7Rm054U9n-gIyeiHwvxaDEzkObTeMY78sG4lfcjwTO4D_KVbwBTV3g7eKfIR1KLZTzaoqvxwRxsdcShZyF7wuarn8ZVyZF2ZkEU5TJCPE1pD91tvN_ZpS6StPubJVECQTI7lMuQ=w800" alt="">
-       <a href="https://paypal.me/tungnxu">https://paypal.me/tungnxu</a>
-    </div>
+
   
 </div>
