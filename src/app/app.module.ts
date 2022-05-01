@@ -22,6 +22,7 @@ import { LoveGiftComponent } from './sections/love-gift/love-gift.component';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, NgZone } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { LoadingService } from './loading.service';
 // import * as $ from 'jquery';
 declare var $: any
@@ -13,10 +14,38 @@ export class AppComponent {
   title = 'th-wedding';
   isShowInfo = false
   loading$ = this.loader.loading$;
-  constructor(private _ngZone: NgZone, private ref: ChangeDetectorRef, public loader: LoadingService) {
+
+  to: string;
+  at: string; 
+
+  constructor(private _ngZone: NgZone, private ref: ChangeDetectorRef, public loader: LoadingService, private route: ActivatedRoute) {
+  }
+
+  getInvitation(){
+    if(this.to.includes('Chị') || this.to.startsWith('Anh')){
+      return "Tới dự bữa cơm thân mật\nchung vui cùng gia đình chúng em"
+    }
+
+    if(this.to.startsWith('Bạn')){
+      return "Tới dự bữa cơm thân mật\nchung vui cùng gia đình mình"
+    }
+
+    if(this.to.startsWith('Em')){
+      return "Tới dự bữa cơm thân mật\nchung vui cùng gia đình anh chị"
+    }
+
+    return 'Tới dự bữa cơm thân mật\nchung vui cùng gia đình chúng tôi'
   }
 
   ngOnInit(): void {
+    // this.to = this.route.snapshot.queryParamMap.get('to')
+    // this.at = this.route.snapshot.queryParams.at;
+
+    this.route.queryParams.subscribe((data) => {
+      this.to = data?.to;
+      this.at = data?.at;
+    })
+    console.log(this.to + ' ' + this.at);
     this.loader.show();
     this.ref.detectChanges();
     
